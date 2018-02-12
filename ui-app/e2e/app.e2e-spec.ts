@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('xintek-ui App', () => {
+describe('ui-app App', () => {
   let page: AppPage;
 
   beforeEach(() => {

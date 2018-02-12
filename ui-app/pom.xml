@@ -7,7 +7,7 @@
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>xintek-ui</artifactId>
+  <artifactId>ui-app</artifactId>
   <description>UI for the test project</description>
   <packaging>jar</packaging>
   <build>

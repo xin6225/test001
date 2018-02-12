@@ -6,7 +6,7 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <modules>
-    <module>xintek-ui</module>
+    <module>ui-app</module>
     <module>backend</module>
   </modules>
 

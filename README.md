@@ -1,7 +1,7 @@
 # XinTek Test Project
 this is a test project with following technologies:
 
--angular 5 
+-angular 
 -springboot 
 -maven
 -docker

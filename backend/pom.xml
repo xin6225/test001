@@ -297,7 +297,7 @@
 
     <dependency>
       <groupId>${project.parent.groupId}</groupId>
-      <artifactId>xintek-ui</artifactId>
+      <artifactId>ui-app</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
 

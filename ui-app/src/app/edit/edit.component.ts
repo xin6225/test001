@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-edit',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+  isLinear = false;
 
-  constructor() { }
+  secondFormGroup: FormGroup;
+
+  constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
+
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
   }
 
 }

@@ -7,28 +7,24 @@
 
   <mat-card-content>
     <mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper">
-      <mat-step [stepControl]="firstFormGroup" label="1. Step">
-        <app-step1 ></app-step1>
+      <mat-step [stepControl]="formGroup" label="Fill out your name">
+        <app-step1 [formGroup]="formGroup"></app-step1>
       </mat-step>
-      <mat-step [stepControl]="secondFormGroup" label="2. Step">
-        <form [formGroup]="secondFormGroup">
-          <ng-template matStepLabel>Fill out your address</ng-template>
+      <mat-step>
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <app-step2 [formGroup]="formGroup"></app-step2>
+      </mat-step>
+      <mat-step>
+        <form [formGroup]="formGroup">
+          <ng-template matStepLabel>Job Information</ng-template>
           <mat-form-field>
-            <input matInput placeholder="Address" formControlName="secondCtrl" required>
+            <input matInput placeholder="Job Title" formControlName="job">
           </mat-form-field>
           <div>
             <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
+            <button mat-button (click)="save()" [disabled]="formGroup.invalid">Save</button>
           </div>
         </form>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Done</ng-template>
-        You are now done.
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
-        </div>
       </mat-step>
     </mat-horizontal-stepper>
   </mat-card-content>

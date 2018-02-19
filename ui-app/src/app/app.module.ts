@@ -38,6 +38,10 @@ import {
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
+
+// ag-grid
+import { AgGridModule }  from 'ag-grid-angular';
+
 import { AppComponent } from './app.component';
 import { OverviewComponent } from './overview/overview.component';
 import { LoginComponent } from './login/login.component';
@@ -46,6 +50,12 @@ import { HelpComponent } from './help/help.component';
 import { MatStepperModule } from '@angular/material';
 import { Step1Component } from './edit/step1/step1.component';
 import { EditComponent } from './edit/edit.component';
+import { DateCellComponent } from './overview/date-cell.component';
+import { ErrorDialogComponent } from './dialog/errordialog.component';
+import { ConfirmDialogComponent } from './dialog/confirm-dialog.component';
+import { LocalCacheService } from './shared/services/local-cache.service';
+import { BackendService } from './shared/services/backend.service';
+import { Step2Component } from './edit/step2/step2.component';
 
 @NgModule({
   exports: [
@@ -94,7 +104,11 @@ export class DemoMaterialModule {}
     LoginComponent,
     HelpComponent,
     EditComponent,
-    Step1Component
+    Step1Component,
+    Step2Component,
+    DateCellComponent,
+    ErrorDialogComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -104,9 +118,11 @@ export class DemoMaterialModule {}
     MatStepperModule,
     FormsModule,
     ReactiveFormsModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    AgGridModule.withComponents([DateCellComponent])
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [LocalCacheService, BackendService],
+  bootstrap: [AppComponent],
+  entryComponents: [ConfirmDialogComponent, ErrorDialogComponent]
 })
 export class AppModule { }

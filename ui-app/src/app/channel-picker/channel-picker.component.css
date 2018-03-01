@@ -33,16 +33,16 @@
   float: left;
 }
 .user {
-  background: #8bc34a;
+  background: #e6910d;
 }
 .doctor {
-  background: #1c75ee;
+  background: #8bc34a;
 }
 .aidman{
-  background: #673ab7;
+  background: #d92a27;
 }
 .vendor{
-  background: #e91e63;
+  background: #005d95;
 }
 
 .mat-icon {

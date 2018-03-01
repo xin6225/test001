@@ -37,7 +37,7 @@ export class EditComponent implements OnInit {
       this.currentData = {
         address: '',
         firstName: '',
-        lastName:'',
+        lastName: '',
         job: '',
         id: Date.now()
       };
@@ -52,13 +52,13 @@ export class EditComponent implements OnInit {
     });
   }
 
-  save(){
+  save() {
     this.openDialog();
   }
 
-  saveToDB(){
+  saveToDB() {
     console.log('save data', this.formGroup.value);
-    if(this.isEditing) {
+    if (this.isEditing) {
       this.backendService.changData(this.formGroup.value);
     } else {
       this.backendService.addData(this.formGroup.value);

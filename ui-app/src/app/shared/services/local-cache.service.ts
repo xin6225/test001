@@ -10,7 +10,7 @@ export class LocalCacheService {
     this.webStorage = window['localStorage'] as Storage;
   }
 
-  observeDatas(datas: Observable<any[]>){
+  observeDatas(datas: Observable<any[]>) {
     this.observeData(datas, this.key);
   }
 

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { AgRendererComponent } from 'ag-grid-angular';
 
 @Component({
-  selector: 'date-cell',
+  selector: 'app-date-cell',
   template: `{{params.value | date:'y-MM-dd HH:mm'}}`
 })
 export class DateCellComponent implements AgRendererComponent {

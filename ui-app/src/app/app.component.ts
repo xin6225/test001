@@ -14,7 +14,7 @@ export class AppComponent {
   openHelp() {
     this.router.navigate(['/help']);
   }
-  openOverview(){
+  openOverview() {
     this.router.navigate(['/overview']);
   }
 }

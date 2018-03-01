@@ -11,7 +11,7 @@ export class BackendService {
   private readonly basePath = '/api/rest';
   private backendStream: BehaviorSubject<any[]>; // data sets from backend api
 
-  constructor(private http: HttpClient, private localCacheService: LocalCacheService,) {
+  constructor(private http: HttpClient, private localCacheService: LocalCacheService) {
     this.backendStream = <BehaviorSubject<any[]>>new BehaviorSubject([]);
     // TODO fetch backend data via getAllData and put then into local storage
 
@@ -27,7 +27,7 @@ export class BackendService {
     return this.backendStream.getValue();
   }
 
-  addData(data: any){
+  addData(data: any) {
     const dataList = this.backendStream.getValue();
     dataList.push(data);
     this.backendStream.next(dataList);
@@ -35,8 +35,8 @@ export class BackendService {
     this.localCacheService.observeDatas(this.backendStream.asObservable());
   }
 
-   getDataById(id: number) : Observable<any> {
-     let editingData = <BehaviorSubject<any[]>>new BehaviorSubject([]);
+   getDataById(id: number): Observable<any> {
+     const editingData = <BehaviorSubject<any[]>>new BehaviorSubject([]);
      editingData.next(this.backendStream.getValue().find(obj =>  obj.id === id ));
      return editingData.asObservable();
 

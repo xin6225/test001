@@ -7,10 +7,12 @@ import { AuthGuardService } from './shared/services/auth-guard.service';
 import { AuthService } from './shared/services/auth.service';
 import { OverviewComponent } from './overview/overview.component';
 import { HelpComponent } from './help/help.component';
+import {ChannelPickerComponent} from './channel-picker/channel-picker.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/overview', pathMatch: 'full'},
+  {path: '', redirectTo: '/channel', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
+  {path: 'channel', component: ChannelPickerComponent},
   {path: 'overview', component: OverviewComponent},
   {path: 'help', component: HelpComponent},
   {path: 'edit/:id', canActivate: [AuthGuardService], component: EditComponent},

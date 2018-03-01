@@ -1,0 +1,54 @@
+.mat-card {
+  width: 960px;
+  margin: auto;
+  padding-top: 148px;
+  padding-bottom: 220px;
+}
+.content {
+  margin: auto;
+  width: 820px;
+}
+.channel-picker-btn {
+  background-color: #ffffff;
+  padding: 24px;
+  margin: 8px 24px 16px 0px;
+  width: 384px;
+  height: 96px;
+  color: rgba(0, 0, 0, 0.54);
+  line-height: 46px;
+  text-align: left;
+}
+.channel-picker-btn:hover {
+  background-color: #e1f5fe;
+}
+
+
+.channel-picker-icon {
+  height:48px;
+  width:48px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 24px;
+  float: left;
+}
+.user {
+  background: #8bc34a;
+}
+.doctor {
+  background: #1c75ee;
+}
+.aidman{
+  background: #673ab7;
+}
+.vendor{
+  background: #e91e63;
+}
+
+.mat-icon {
+  vertical-align: middle;
+}
+
+span {
+  margin-left: 24px;
+}

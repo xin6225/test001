@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RefData } from '../shared/data/refData';
 import {BackendService} from '../shared/services/backend.service';
-import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-overview',
@@ -19,15 +18,15 @@ export class OverviewComponent implements OnInit {
 
   ngOnInit() {
     this.columnDefs = [
-      {headerName: "First Name", field: "firstName", width: 300},
-      {headerName: "Last Name", field: "lastName", width: 300},
-      {headerName: "Address", field: "address", width: 300},
-      {headerName: "Job Title", field: "job", width: 300},
+      {headerName: 'First Name', field: 'firstName', width: 300},
+      {headerName: 'Last Name', field: 'lastName', width: 300},
+      {headerName: 'Address', field: 'address', width: 300},
+      {headerName: 'Job Title', field: 'job', width: 300},
     ];
     this.rowData = this.backendService.allData;
   }
 
-  createData(){
+  createData() {
     this.router.navigate(['/create']);
   }
 
@@ -44,14 +43,17 @@ export class OverviewComponent implements OnInit {
 
 
 function countryCellRenderer(params) {
-  const flag = "<img border='0' width='15' height='10' style='margin-bottom: 2px' src='https://www.ag-grid.com/images/flags/" + RefData.COUNTRY_CODES[params.value] + ".png'>";
-  return flag + " " + params.value;
+  const flag = '<img border="0" width="15" height="10" style="margin-bottom: 2px" ' +
+    'src="https://www.ag-grid.com/images/flags/' + RefData.COUNTRY_CODES[params.value] + '.png">';
+  return flag + ' ' + params.value;
 }
 
 
-//Utility function used to pad the date formatting.
+// Utility function used to pad the date formatting.
 function pad(num, totalStringSize) {
-  let asString = num + "";
-  while (asString.length < totalStringSize) asString = "0" + asString;
+  let asString = num + '';
+  while (asString.length < totalStringSize) {
+    asString = '0' + asString;
+  }
   return asString;
 }

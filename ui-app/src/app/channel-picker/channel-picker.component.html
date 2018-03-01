@@ -1,0 +1,37 @@
+<div>
+    <mat-card>
+      <div class="content">
+        <mat-card-title>which type of user are you?</mat-card-title>
+        <mat-card-content>
+          <button class="mat-raised-button channel-picker-btn" (click)="userLogin()"
+                  matTooltip="You need to have permission enabled in your system." [matTooltipDisabled]="!isEmailDisabled">
+            <div class="channel-picker-icon user">
+              <mat-icon>accessibility</mat-icon>
+            </div>
+            <span>Private User</span>
+
+          </button>
+          <button class="mat-raised-button channel-picker-btn" (click)="doctorLogin()"
+                  matTooltip="You need to have permission enabled in your system." [matTooltipDisabled]="!isPushDisabled">
+            <div class="channel-picker-icon doctor">
+              <mat-icon>healing</mat-icon>
+            </div>
+            <span>Doctor</span>
+          </button>
+          <button class="mat-raised-button channel-picker-btn" (click)="aidmanLogin()"
+                  matTooltip="You need to have permission enabled in your system." [matTooltipDisabled]="!isSMSDisabled">
+            <div class="channel-picker-icon aidman">
+              <mat-icon>local_pharmacy</mat-icon>
+            </div>
+            <span>Services Provider</span>
+          </button>
+          <button class="mat-raised-button channel-picker-btn" (click)="vendorLogin()">
+            <div class="channel-picker-icon vendor">
+              <mat-icon>shopping_card</mat-icon>
+            </div>
+            <span>Medical Products Provider</span>
+          </button>
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>

@@ -3,44 +3,11 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CdkTableModule } from '@angular/cdk/table';
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatFormFieldModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-} from '@angular/material';
 
+// angular material
+import { MaterialModule } from './shared/material.module';
 // ag-grid
-import { AgGridModule }  from 'ag-grid-angular';
+import { AgGridModule } from 'ag-grid-angular';
 
 import { AppComponent } from './app.component';
 import { OverviewComponent } from './overview/overview.component';
@@ -56,46 +23,7 @@ import { ConfirmDialogComponent } from './dialog/confirm-dialog.component';
 import { LocalCacheService } from './shared/services/local-cache.service';
 import { BackendService } from './shared/services/backend.service';
 import { Step2Component } from './edit/step2/step2.component';
-
-@NgModule({
-  exports: [
-    CdkTableModule,
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
-  ]
-})
-export class DemoMaterialModule {}
-
+import { ChannelPickerComponent } from './channel-picker/channel-picker.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +36,8 @@ export class DemoMaterialModule {}
     Step2Component,
     DateCellComponent,
     ErrorDialogComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ChannelPickerComponent
   ],
   imports: [
     BrowserModule,
@@ -118,7 +47,7 @@ export class DemoMaterialModule {}
     MatStepperModule,
     FormsModule,
     ReactiveFormsModule,
-    DemoMaterialModule,
+    MaterialModule,
     AgGridModule.withComponents([DateCellComponent])
   ],
   providers: [LocalCacheService, BackendService],

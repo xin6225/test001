@@ -1,0 +1,124 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.leftnav-main{
+  background-color: #092304;
+  box-shadow: 2px 0 2px 0 rgba(0, 0, 0, .24);
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 1;
+}
+
+.leftnav-sub {
+  width: 0;
+  background-color: #0c3503;
+  box-shadow: 2px 0 2px 0 rgba(0, 0, 0, .24);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 60px;
+  transition: width .3s;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 2;
+}
+
+.leftnav-sub.open {
+  width: 220px;
+  border-left: 1px solid #526652;
+  transition: width .7s;
+}
+
+.nav-item {
+  width: 100%;
+  position: relative;
+  text-transform: none;
+  line-height: 50px;
+  height: 50px;
+  color: #fff;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: .1em;
+  border-bottom: 1px solid #526652;
+}
+
+.nav-item.main {
+  padding: 0 54px 0 60px;
+}
+
+.nav-item.main:hover, .nav-item.main.active {
+  background-color: #0c3503;
+  box-shadow: inset 4px 0 0 0 #027c02;
+}
+
+.nav-item.main.highlight {
+  background-color: #027c02;
+  box-shadow: none;
+}
+
+.nav-item.sub {
+  padding: 0 10px;
+}
+
+.nav-item.sub:hover {
+  background-color: #282828;
+  box-shadow: inset -4px 0 0 0 #027c02;
+}
+
+.nav-item.sub.highlight {
+  color: #027c02;
+  box-shadow: none;
+  background-color: #0c3503;
+}
+
+.nav-item-icon {
+  position: absolute;
+  left: 17px;
+  line-height: 50px;
+  height: 50px;
+  font-size: 18px;
+}
+
+.nav-item-submenu-indicator {
+  position: absolute;
+  right: 17px;
+  line-height: 50px;
+  height: 50px;
+  font-size: 18px;
+}
+
+
+.subnav-header {
+  color: #fff;
+  height: 70px;
+  padding: 25px 0 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid #526652;
+  box-sizing: border-box;
+}
+
+.subnav-header h5 {
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  margin: 10px 0;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu.active {
+  display: block;
+}

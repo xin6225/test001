@@ -1,5 +1,12 @@
-.example-fill-remaining-space {
-  /* This fills the remaining space, by using flexbox.
-     Every toolbar row uses a flexbox row layout. */
-  flex: 1 1 auto;
+mat-toolbar {
+  background-color: #d37802;
+  color: #ffffff;
+}
+
+mat-toolbar .app-title {
+  margin-left: 80px;
+}
+.main-action-icon button {
+  min-width: 56px;
+  padding: 0;
 }

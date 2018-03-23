@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 /*import Advanced Grid CSS*/
 @import '~ag-grid/dist/styles/ag-grid.css';
 @import '~ag-grid/dist/styles/ag-theme-material.css';
@@ -10,4 +10,10 @@ html, body, app-root {
   height: 100%;
   font-size: 14px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
 }

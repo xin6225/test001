@@ -17,8 +17,8 @@ import { MatDialogRef } from '@angular/material';
                    </li>
                  </ul>
              </mat-dialog-content>
-             <mat-dialog-actions cdk-focus-start>
-              <button md-button md-dialog-close>ok</button>
+             <mat-dialog-actions cdkfocusstart>
+              <button mat-button md-dialog-close>ok</button>
              </mat-dialog-actions>`
 })
 export class ErrorDialogComponent {

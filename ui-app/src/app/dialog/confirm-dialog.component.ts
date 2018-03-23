@@ -6,8 +6,8 @@ import { MatDialogRef} from '@angular/material';
   template: `<h2 mat-dialog-title>Confirm</h2>
   <mat-dialog-content>Do you really want to continue?</mat-dialog-content>
   <mat-dialog-actions cdk-focus-start>
-    <button md-button (click)="cancel()">CANCEL</button>
-    <button md-button (click)="ok()">OK</button>
+    <button mat-button (click)="cancel()">CANCEL</button>
+    <button mat-button (click)="ok()">OK</button>
   </mat-dialog-actions>`
 })
 export class ConfirmDialogComponent {

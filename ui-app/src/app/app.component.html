@@ -1,13 +1,23 @@
-<mat-toolbar color="primary" role="header">
-  <span>Welcome to {{ title }}!</span>
+<mat-toolbar role="header">
+  <span class="app-title">Welcome to {{ title }}</span>
 
   <!-- This fills the remaining space of the current row -->
   <span class="example-fill-remaining-space"></span>
 
-  <span>
-    <button mat-button (click)="openOverview()">Overview</button>
+  <span class="main-action-icon">
+    <button mat-button (click)="openOverview()"><mat-icon>notifications</mat-icon></button>
     <button mat-button (click)="openHelp()"><mat-icon>help</mat-icon></button>
+    <button mat-button (click)="openOverview()"><mat-icon>settings</mat-icon></button>
+    <button mat-button (click)="openOverview()"><mat-icon>face</mat-icon></button>
+     <button mat-button (click)="openOverview()"><mat-icon>exit_to_app</mat-icon></button>
   </span>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<app-navigation-container>
+  <app-navigation [apiUrl]="lefNavUrl"></app-navigation>
+
+  <navigation-content>
+    <router-outlet></router-outlet>
+  </navigation-content>
+</app-navigation-container>
+

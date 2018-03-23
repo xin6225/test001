@@ -6,7 +6,7 @@
 }
 .content {
   margin: auto;
-  width: 820px;
+  width: 100%;
 }
 .channel-picker-btn {
   background-color: #ffffff;
@@ -21,7 +21,6 @@
 .channel-picker-btn:hover {
   background-color: #e1f5fe;
 }
-
 
 .channel-picker-icon {
   height:48px;

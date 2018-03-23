@@ -24,6 +24,11 @@ import { LocalCacheService } from './shared/services/local-cache.service';
 import { BackendService } from './shared/services/backend.service';
 import { Step2Component } from './edit/step2/step2.component';
 import { ChannelPickerComponent } from './channel-picker/channel-picker.component';
+import { AlertService } from './shared/services/alert.service';
+import { HomeComponent } from './home/home.component';
+import {NavigationModule} from './navigation/navigation.module';
+import {appConfigProvider} from '../environments/environment';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,9 @@ import { ChannelPickerComponent } from './channel-picker/channel-picker.componen
     DateCellComponent,
     ErrorDialogComponent,
     ConfirmDialogComponent,
-    ChannelPickerComponent
+    ChannelPickerComponent,
+    HomeComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +55,10 @@ import { ChannelPickerComponent } from './channel-picker/channel-picker.componen
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    AgGridModule.withComponents([DateCellComponent])
+    AgGridModule.withComponents([DateCellComponent]),
+    NavigationModule
   ],
-  providers: [LocalCacheService, BackendService],
+  providers: [appConfigProvider, LocalCacheService, BackendService, AlertService],
   bootstrap: [AppComponent],
   entryComponents: [ConfirmDialogComponent, ErrorDialogComponent]
 })

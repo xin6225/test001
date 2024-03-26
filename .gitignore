@@ -1,2 +1,18 @@
-.idea/
-/node_modules
+.idea
+/.idea/sonarlint/*
+/.idea/shelf/
+
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# ui cache
+ui-app/node_modules
+ui-app/.angular
+ui-app/.sass-cache
+ui-app/dist
+
+
+*.iml

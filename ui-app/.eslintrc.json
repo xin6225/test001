@@ -1,0 +1,181 @@
+{
+  "root": true,
+  "ignorePatterns": [],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": false
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        // Eslint rules. see https://github.com/eslint/eslint/tree/03ac8cfc773279c01a62897692160f9a883ff4f5/docs/rules
+        "arrow-body-style": [
+          "error",
+          "as-needed"
+        ],
+        "brace-style": [
+          "error",
+          "1tbs"
+        ],
+        "semi": [
+          2,
+          "always"
+        ],
+        "curly": "error",
+        "eol-last": [
+          "error",
+          "always"
+        ],
+        "eqeqeq": [
+          "error",
+          "smart"
+        ],
+        "no-underscore-dangle": "off",
+        "prefer-arrow/prefer-arrow-functions": [
+          "off"
+        ],
+        "space-before-function-paren": [
+          "error",
+          {
+            "anonymous": "never",
+            "named": "never",
+            "asyncArrow": "always"
+          }
+        ],
+        "no-undef": "off",
+        "max-len": [
+          "error",
+          {
+            "code": 140
+          }
+        ],
+        "no-setter-return": "off",
+        "no-restricted-imports": [
+          "error",
+          {
+            "paths": [
+              "@angular/material/autocomplete",
+              "@angular/material/card",
+              "@angular/material/chips",
+              "@angular/material/paginator",
+              "@angular/material/radio",
+              "@angular/material/slider",
+              "@angular/material/tabs"
+            ]
+          }
+        ],
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "off",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/member-ordering": [
+          "warn",
+          {
+            "default": [
+              "static-field",
+              "instance-field",
+              "static-method",
+              "instance-method"
+            ]
+          }
+        ],
+        "no-dupe-class-members": "off",
+        "@typescript-eslint/no-dupe-class-members": [
+          "error"
+        ],
+        "no-array-constructor": "off",
+        "@typescript-eslint/no-array-constructor": [
+          "error"
+        ],
+        "@typescript-eslint/no-empty-interface": [
+          "error",
+          {
+            "allowSingleExtends": false
+          }
+        ],
+        "@typescript-eslint/parameter-properties": "error",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-class-suffix": [
+          "error"
+        ],
+        "@angular-eslint/contextual-lifecycle": [
+          "error"
+        ],
+        "@angular-eslint/directive-class-suffix": [
+          "error"
+        ],
+        "@angular-eslint/no-conflicting-lifecycle": [
+          "error"
+        ],
+        "@angular-eslint/no-host-metadata-property": [
+          "error"
+        ],
+        "@angular-eslint/no-input-rename": [
+          "error"
+        ],
+        "@angular-eslint/no-inputs-metadata-property": [
+          "error"
+        ],
+        "@angular-eslint/no-output-native": [
+          "error"
+        ],
+        "@angular-eslint/no-output-on-prefix": [
+          "error"
+        ],
+        "@angular-eslint/no-output-rename": [
+          "error"
+        ],
+        "@angular-eslint/no-outputs-metadata-property": [
+          "error"
+        ],
+        "@angular-eslint/use-lifecycle-interface": [
+          "error"
+        ],
+        "@angular-eslint/use-pipe-transform-interface": [
+          "error"
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}

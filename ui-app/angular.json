@@ -8,6 +8,9 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "travel",
@@ -31,7 +34,12 @@
             "styles": [
               "travel/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "buildOptimizer": false,
+            "optimization": false,
+            "extractLicenses": false,
+            "sourceMap": true,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -53,7 +61,13 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "travel/src/environments/environment.ts",
+                  "with": "travel/src/environments/environment.prod.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -91,7 +105,7 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "tsconfig.spec.json",
+            "tsConfig": "travel/tsconfig.spec.json",
             "assets": [
               "travel/src/favicon.ico",
               "travel/src/assets"
@@ -100,6 +114,15 @@
               "travel/src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "travel/**/*.ts",
+              "travel/**/*.html"
+            ]
           }
         }
       }

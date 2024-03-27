@@ -1,0 +1,14 @@
+{
+  "name": "@xintek/travel",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve travel",
+    "mock": "ng serve travel --configuration=mock",
+    "build": "ng build travel",
+    "test": "ng test travel",
+    "test-headless": "ng test travel --watch=false --browsers=ChromeHeadless --reporters junit",
+    "test-docker": "ng test travel --watch=false --browsers=ChromeHeadlessNoSandbox --reporters junit",
+    "lint": "ng lint travel"
+  },
+  "private": true
+}

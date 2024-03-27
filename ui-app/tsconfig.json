@@ -6,8 +6,8 @@
       "@xintek/libs/*": [
         "./libs/src/public-api.ts"
       ],
-      "@corpuls/analyse-ng/*": [
-        "./analyse-ng/src/app/modules/*"
+      "@xintek/travel/*": [
+        "./travel/src/app/modules/*"
       ]
     },
     "baseUrl": "./",

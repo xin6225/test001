@@ -1,10 +1,10 @@
-<h1>{{ article?.timestamp }} {{ article?.geoPosition }}</h1>
+<h1>{{ article?.timestamp }}</h1>
 <h2>{{ article?.country }}</h2>
 <h3>{{ article?.city }}</h3>
 <article>
     @for (part of article?.contents; track part) {
         <section>
-            <img class="article-image" [src]="part.filename" alt="part.filename"/>
+            <img class="article-image" [src]="part.imgUrl" alt="part.filename"/>
             <span>{{ part.description }}</span>
         </section>
     }

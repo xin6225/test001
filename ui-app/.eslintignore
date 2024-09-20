@@ -1,0 +1,10 @@
+node_modules
+dist
+target
+docs
+
+
+jest.config.js
+fixtures
+coverage
+__snapshots__

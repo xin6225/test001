@@ -1,17 +1,18 @@
 import {Routes} from "@angular/router";
+import AppComponent from "./app.component";
+import ArticleComponent from "@xintek/travel/article/components/article.component";
 
 export const routes: Routes = [
     {
         path: '',
-        loadComponent: () => import('./app.component'),
+        component: AppComponent,
         children: [
             {
                 path: 'article',
-                loadComponent: () => import('@xintek/travel/article/components/article.component'),
+                component: ArticleComponent,
                 canActivate: [() => {
                     return true;
-                }],
-                title: 'Article'
+                }]
             }
         ]
     }

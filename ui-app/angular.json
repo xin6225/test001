@@ -27,6 +27,7 @@
               "zone.js"
             ],
             "tsConfig": "travel/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "travel/src/favicon.ico",
               "travel/src/assets"
@@ -34,6 +35,11 @@
             "styles": [
               "travel/src/styles.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "travel/src/styles"
+              ]
+            },
             "scripts": [],
             "buildOptimizer": false,
             "optimization": false,
@@ -82,6 +88,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "travel:build"
+          },
           "configurations": {
             "production": {
               "buildTarget": "travel:build:production"

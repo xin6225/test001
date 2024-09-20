@@ -1,6 +1,5 @@
 export interface Article {
     readonly  timestamp: string; // ISO date time format UTC timezone
-    readonly  geoPosition: string;
     readonly country: string;
     readonly  city: string;
     readonly  title?: string;
@@ -9,6 +8,6 @@ export interface Article {
 }
 
 export interface ArticlePart {
-    readonly filename?: string;
+    readonly imgUrl?: string;
     readonly description: string;
 }

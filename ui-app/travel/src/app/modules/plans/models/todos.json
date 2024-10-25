@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Arbeitgeber",
+    "icon": "handshake",
+    "description": "Vertrag sabbatical",
+    "content": "Text here ..."
+  },
+  {
+    "title": "Versicherungen",
+    "icon": "check_circle",
+    "description": "Ausland Krankenversicherung",
+    "content": "Text here ..."
+  },
+  {
+    "title": "Wohnungen",
+    "icon": "house",
+    "description": "Mietvertrag/Pflanzen/Haustier",
+    "content": "Text here ..."
+  },
+  {
+    "title": "Impfungen",
+    "icon": "vaccines",
+    "description": "Arzt Termin",
+    "content": "Text here ..."
+  },
+  {
+    "title": "Post Weiterleitungen",
+    "icon": "forward_to_inbox",
+    "description": "Post / Briefkassen",
+    "content": "Text here ..."
+  },
+  {
+    "title": "Notfall Plan",
+    "icon": "notification_important",
+    "description": "Telefon Nr./ Email / Tracker",
+    "content": "Text here ..."
+  }
+]

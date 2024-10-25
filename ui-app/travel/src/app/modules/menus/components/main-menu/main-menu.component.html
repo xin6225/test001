@@ -1,0 +1,29 @@
+<button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+    Menu
+</button>
+<mat-menu #menu="matMenu">
+    <a routerLink="/home" mat-menu-item>
+        <mat-icon>home</mat-icon>
+        Home
+    </a>
+    <a routerLink="/plans" mat-menu-item>
+        <mat-icon>travel_explore</mat-icon>
+        Plan
+    </a>
+    <a routerLink="/report" mat-menu-item>
+        <mat-icon>flag_circle</mat-icon>
+        Report
+    </a>
+</mat-menu>
+
+
+<button mat-button [matMenuTriggerFor]="language">
+    <mat-icon>language</mat-icon>
+    Language
+</button>
+<mat-menu #language="matMenu">
+    <button mat-menu-item><img class="language" alt="Enghish" src="assets/en.png">English</button>
+    <button mat-menu-item><img class="language" alt="Deutsch" src="assets/de.png">Deutsch</button>
+    <button mat-menu-item><img class="language" alt="Chinese" src="assets/zh.png">中文</button>
+</mat-menu>

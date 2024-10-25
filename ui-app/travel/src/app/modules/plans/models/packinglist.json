@@ -1,0 +1,28 @@
+[
+  {
+    "category": "Most Important",
+    "items": [
+      {
+        "name": "Passport",
+        "description": "with valid date and enough pages for Visum"
+      },
+      {
+        "name": "Credit Card",
+        "description": "Which can be used in most countries"
+      },
+      {
+        "name": "Notfall TelefonList / Kopie Passport",
+        "description": "If you lost your passport or in a emergency situation"
+      }
+    ]
+  },
+  {
+    "category": "Clothes",
+    "items": [
+      {
+        "name": "Shoes",
+        "description": "2 paar"
+      }
+    ]
+  }
+]

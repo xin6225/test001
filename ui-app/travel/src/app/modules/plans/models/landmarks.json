@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Machu Picchu",
+    "country": "Peru",
+    "continent": "South America",
+    "area": "",
+    "description": "Lost City of the Incas",
+    "mustHave": true,
+    "detail": "machupicchu.gob.pe"
+  },
+  {
+    "name": "Lake Titicaca",
+    "country": "Bolivia",
+    "continent": "South America",
+    "area": "",
+    "description": " It is often called the highest navigable lake in the world.",
+    "mustHave": true,
+    "detail": "https://en.wikipedia.org/wiki/Lake_Titicaca"
+  },
+  {
+    "name": "Sydney",
+    "country": "Australia",
+    "continent": "Australia",
+    "area": "",
+    "description": " ",
+    "mustHave": false,
+    "detail": ""
+  },
+  {
+    "name": "Blue Mountains National Park",
+    "country": "Australia",
+    "continent": "Australia",
+    "area": "New South Wealth",
+    "description": " ",
+    "mustHave": true,
+    "detail": ""
+  }
+]

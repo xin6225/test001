@@ -1,0 +1,85 @@
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+    <mat-tab label="Targets" matSort (matSortChange)="announceSortChange($event)">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="must">
+                <th mat-header-cell *matHeaderCellDef>Must Have?</th>
+                <td mat-cell *matCellDef="let element">
+                    @if (element.mustHave) {
+                        <mat-icon class="material-icons color_red">favorite</mat-icon>
+                    } @else {
+                        <mat-icon class="material-icons color_rosa">recommend</mat-icon>
+                    }
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="continent">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Continent</th>
+                <td mat-cell *matCellDef="let element"> {{ element.continent }}</td>
+            </ng-container>
+            <ng-container matColumnDef="country">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Country</th>
+                <td mat-cell *matCellDef="let element"> {{ element.country }}</td>
+            </ng-container>
+            <ng-container matColumnDef="area">
+                <th mat-header-cell *matHeaderCellDef>Area</th>
+                <td mat-cell *matCellDef="let element"> {{ element.area }}</td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+                <td mat-cell *matCellDef="let element"> {{ element.name }}</td>
+            </ng-container>
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef>description</th>
+                <td mat-cell *matCellDef="let element"> {{ element.description }} {{ element.detail }}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </mat-tab>
+    <mat-tab label="Budgets">
+        Visum
+        Währungen
+        Verkehrsmittel
+        Unterkunft
+        Essen/Trinken
+    </mat-tab>
+
+    <mat-tab label="Todos">
+        <div class="todos-action-buttons">
+            <button mat-button (click)="accordion().openAll()">Expand All</button>
+            <button mat-button (click)="accordion().closeAll()">Collapse All</button>
+        </div>
+        <mat-accordion class="todos-headers-align" multi>
+            @for (todo of todos; track todo) {
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <mat-icon>{{ todo.icon }}</mat-icon>
+                            {{ todo.title }}
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            {{ todo.description }}
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div> {{ todo.content }}</div>
+                </mat-expansion-panel>
+            }
+        </mat-accordion>
+    </mat-tab>
+    <mat-tab label="Packlist">
+        @for (item of packingList; track item; let i = $index) {
+            <h3>{{ item.category }}</h3>
+            <mat-list>
+                @for (thing of item.items; track thing) {
+                    <mat-list-item>
+                        <span matListItemTitle>{{ thing.name }}</span>
+                        <span matListItemLine>{{ thing.description }}</span>
+                    </mat-list-item>
+                }
+            </mat-list>
+        }
+    </mat-tab>
+</mat-tab-group>
+
+
+
+

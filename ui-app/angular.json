@@ -33,6 +33,7 @@
               "travel/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "travel/src/styles.css"
             ],
             "stylePreprocessorOptions": {
@@ -120,6 +121,7 @@
               "travel/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "travel/src/styles.css"
             ],
             "scripts": []

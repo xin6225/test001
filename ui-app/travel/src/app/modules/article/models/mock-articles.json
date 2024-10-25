@@ -11,5 +11,18 @@
         "imgUrl": "assets/alarm.svg"
       }
     ]
+  },
+  {
+    "timestamp": "2024-05-06T14:31:58+02:00",
+    "country": "P.R. China",
+    "city": "Beijing",
+    "title": "second article",
+    "isDraft": false,
+    "contents": [
+      {
+        "description": "Beijing is one of the largest and the most known cities in China, located in the east-central, coastal part of the country. Shanghai is the most crowded city in the country. Situated on the coast of the East China Sea, it is a historic city and a very important commercial spot. Shanghai used to be the easternmost point of the Great Silk Road by which the goods from the Far East were being delivered to the area of modern Turkey, the city of Istanbul. Modern Shanghai is an extremely busy city, with modern skyscrapers and a breathtaking outline. There are plenty of businesses, commercial organizations, cultural, sports, and entertainment establishments located in Shanghai.",
+        "imgUrl": "assets/alarm.svg"
+      }
+    ]
   }
 ]

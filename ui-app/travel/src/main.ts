@@ -1,5 +1,5 @@
 import {environment} from './environments/environment';
-import {enableProdMode} from "@angular/core";
+import {DEFAULT_CURRENCY_CODE, enableProdMode} from "@angular/core";
 import {bootstrapApplication} from "@angular/platform-browser";
 import {RootComponent} from "./app/components/root/root.component";
 import {provideRouter, withComponentInputBinding} from "@angular/router";
@@ -11,6 +11,7 @@ if (environment.production) {
 }
 bootstrapApplication(RootComponent, {
     providers: [
+        {provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'},
         provideRouter(routes, withComponentInputBinding()),
         provideAnimationsAsync(),
     ]

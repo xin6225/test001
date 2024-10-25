@@ -5,9 +5,8 @@ import allArticles from '../modules/article/models/mock-articles.json';
 @Injectable({providedIn: 'root'})
 export class ArticleService {
 
-    getLatestArticle(): Article {
-        console.log('test', allArticles);
-        return allArticles[0];
+    getAllArticles(): Article[] {
+        return allArticles;
     }
 
 }

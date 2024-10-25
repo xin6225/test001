@@ -1,10 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@include mat.core();
 
-body {
-    margin: 0;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-}
-
-html, body {
-    height: 100%;
-}

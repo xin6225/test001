@@ -1,12 +1,16 @@
-<h1>{{ article?.timestamp }}</h1>
-<h2>{{ article?.country }}</h2>
-<h3>{{ article?.city }}</h3>
-<article>
-    @for (part of article?.contents; track part) {
-        <section>
-            <img class="article-image" [src]="part.imgUrl" alt="part.filename"/>
-            <span>{{ part.description }}</span>
-        </section>
-    }
-</article>
+@for (article of articles; track article) {
+    <h1>{{ article?.timestamp | datetime }}</h1>
+    <h2>{{ article?.country }}</h2>
+    <h3>{{ article?.city }}</h3>
+    <article>
+        @for (part of article?.contents; track part) {
+            <section>
+                <img class="article-image" [src]="part.imgUrl" alt="part.filename"/>
+                <span>{{ part.description }}</span>
+            </section>
+        }
+    </article>
+    <mat-divider class="divider"></mat-divider>
+}
+
 

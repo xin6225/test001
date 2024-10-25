@@ -2,6 +2,8 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {TranslateModule} from '@ngx-translate/core';
 import {Article} from "../models/article";
 import {ArticleService} from "../../../services/article.service";
+import {MatDividerModule} from "@angular/material/divider";
+import {DatetimePipe} from "../../../pipes/datetime.pipe";
 
 @Component({
     selector: 'app-article',
@@ -9,12 +11,16 @@ import {ArticleService} from "../../../services/article.service";
     templateUrl: './article.component.html',
     styleUrl: './article.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [TranslateModule],
+    imports: [
+        TranslateModule,
+        MatDividerModule,
+        DatetimePipe
+    ],
 })
 export class ArticleComponent {
-    public article: Article | undefined;
+    public articles: Article[] | undefined;
 
     constructor(articleService: ArticleService) {
-        this.article = articleService.getLatestArticle();
+        this.articles = articleService.getAllArticles();
     }
 }

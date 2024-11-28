@@ -1,0 +1,35 @@
+services:
+
+  keycloak:
+    image: keycloak/keycloak
+    command: start-dev --import-realm
+    environment:
+      KC_DB: postgres
+      KC_DB_PASSWORD: pass
+      KC_DB_URL_HOST: keycloak-pg
+      KC_DB_USERNAME: xin
+      KEYCLOAK_ADMIN: xin
+      KEYCLOAK_ADMIN_PASSWORD: pass
+    restart: always
+    mem_limit: 1024M
+    ports:
+      - "8080:8080"
+    volumes:
+      - keycloak-state:/opt/keycloak/state/
+    depends_on:
+      - keycloak-pg
+    logging:
+      driver: local
+
+  keycloak-pg:
+    image: postgres:17.0
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: xin
+      POSTGRES_PASSWORD: pass
+    restart: always
+    mem_limit: 256M
+    volumes:
+      - keycloak:/var/lib/postgresql/data
+    logging:
+      driver: local

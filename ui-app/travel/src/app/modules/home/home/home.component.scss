@@ -1,0 +1,17 @@
+:host {
+  background-color: #eee;
+}
+
+section {
+  border-bottom: 1px solid darkcyan;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 2px 6px 9px 2px rgb(0 0 0 / 20%);
+  background-color: #fff;
+}
+
+.map {
+  max-height: 500px;
+  max-width: 600px;
+}

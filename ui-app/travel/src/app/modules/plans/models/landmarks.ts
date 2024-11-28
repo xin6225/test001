@@ -4,6 +4,7 @@ export interface Landmark {
     country: string;
     continent: string;
     description: string;
-    mustHave: boolean; // must have or nice to have
-    detail?: string; // everything you need to know
+    mustHave: boolean; // true: must have;  false: nice to have
+    detail?: string; // everything you need to know, when is the best time to visit etc.
+    visitTime: string; // yyyy-mm
 }

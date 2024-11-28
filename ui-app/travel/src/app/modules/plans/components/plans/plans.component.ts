@@ -38,7 +38,7 @@ export class PlansComponent implements AfterViewInit {
     accordion = viewChild.required(MatAccordion);
     #liveAnnouncer = inject(LiveAnnouncer);
     public todos: Todo[];
-    public displayedColumns = ['must', 'continent', 'country', 'area', 'name', 'description'];
+    public displayedColumns = ['visitTime', 'continent', 'country', 'area', 'name', 'description', 'must'];
     public landmarks: Landmark[] = [];
     public packingList: PackingList[] = [];
     public dataSource = new MatTableDataSource<Landmark>();

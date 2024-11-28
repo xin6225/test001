@@ -1,3 +1,19 @@
+:host {
+  display: flex;
+  background-color: #116c30;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .language {
   padding-right: 5px;
+}
+
+.logo {
+  max-height: 60px;
+  fill: white;
+}
+
+.mat-mdc-button {
+  color: #fff !important;
 }

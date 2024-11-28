@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Norwegen",
+    "country": "Norwegen",
+    "continent": "Europe",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-08"
+  },
+  {
+    "name": "Finnland",
+    "country": "Finnland",
+    "continent": "Europe",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-08"
+  },
+  {
+    "name": "Dänemark",
+    "country": "Dänemark",
+    "continent": "Europe",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-08"
+  },
+  {
+    "name": "Pyramide",
+    "country": "Egypt",
+    "continent": "Africa",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-09"
+  },
+  {
+    "name": "Dubai",
+    "country": "Dubai",
+    "continent": "Africa",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-09"
+  },
+  {
+    "name": "Oman",
+    "country": "Oman",
+    "continent": "Africa",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-09"
+  },
+  {
+    "name": "Nepal",
+    "country": "Nepal",
+    "continent": "Asia",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-10"
+  },
+  {
+    "name": "Bankok",
+    "country": "Thailand",
+    "continent": "Asia",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-11"
+  },
+  {
+    "name": "Tokio",
+    "country": "Japan",
+    "continent": "Asia",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-11"
+  },
+  {
+    "name": "Soel",
+    "country": "Süd Korea",
+    "continent": "Asia",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-11"
+  },
+  {
+    "name": "Taipei",
+    "country": "Taiwan",
+    "continent": "Asia",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-11"
+  },
+  {
+    "name": "Sydney",
+    "country": "Australia",
+    "continent": "Australia",
+    "area": "",
+    "description": " ",
+    "mustHave": false,
+    "detail": "",
+    "visitTime": "2025-12"
+  },
+  {
+    "name": "Blue Mountains National Park",
+    "country": "Australia",
+    "continent": "Australia",
+    "area": "New South Wealth",
+    "description": " ",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2025-12"
+  },
+  {
+    "name": "",
+    "country": "New Zealand",
+    "continent": "New Zealand",
+    "area": "",
+    "description": " ",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2026-01"
+  },
+  {
+    "name": "",
+    "country": "Süd pacifische Insel",
+    "continent": "Süd pacifische",
+    "area": "Süd pacifische",
+    "description": " ",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2026-01"
+  },
+  {
+    "name": "Buenos Aires",
+    "country": "Agentina",
+    "continent": "South America",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2026-02"
+  },
+  {
+    "name": "",
+    "country": "Chille",
+    "continent": "South America",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2026-02"
+  },
+  {
+    "name": "Lake Titicaca",
+    "country": "Bolivia",
+    "continent": "South America",
+    "area": "",
+    "description": " It is often called the highest navigable lake in the world.",
+    "mustHave": true,
+    "detail": "https://en.wikipedia.org/wiki/Lake_Titicaca",
+    "visitTime": "2026-03"
+  },
+  {
+    "name": "Machu Picchu",
+    "country": "Peru",
+    "continent": "South America",
+    "area": "",
+    "description": "Lost City of the Incas",
+    "mustHave": true,
+    "detail": "machupicchu.gob.pe",
+    "visitTime": "2026-04"
+  },
+  {
+    "name": "Cuba",
+    "country": "Cuba",
+    "continent": "Cuba Insel",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2026-05"
+  },
+  {
+    "name": "Hawaii",
+    "country": "Hawaii",
+    "continent": "Hawaii",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2026-05"
+  },
+  {
+    "name": "",
+    "country": "USA",
+    "continent": "Nord America",
+    "area": "West",
+    "description": " It is often called the highest navigable lake in the world.",
+    "mustHave": true,
+    "detail": "https://en.wikipedia.org/wiki/Lake_Titicaca",
+    "visitTime": "2026-06"
+  },
+  {
+    "name": "",
+    "country": "Canada",
+    "continent": "Nord America",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2026-07"
+  },
+  {
+    "name": "New York",
+    "country": "USA",
+    "continent": "Nord America",
+    "area": "Ost",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "2026-08"
+  }
+]

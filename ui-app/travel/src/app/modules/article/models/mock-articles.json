@@ -24,5 +24,18 @@
         "imgUrl": "assets/alarm.svg"
       }
     ]
+  },
+  {
+    "timestamp": "2024-10-06T14:31:58+02:00",
+    "country": "Germany",
+    "city": "Munich",
+    "title": "second article",
+    "isDraft": false,
+    "contents": [
+      {
+        "description": "Michael ist schlau",
+        "imgUrl": "assets/alarm.svg"
+      }
+    ]
   }
 ]

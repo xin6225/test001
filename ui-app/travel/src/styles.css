@@ -2,3 +2,19 @@
 @use '@angular/material' as mat;
 @include mat.core();
 
+body {
+    margin: 0;
+    font-family: Noto Sans, sans-serif;
+}
+
+h1 {
+    font-size: larger;
+}
+
+h2 {
+    font-size: large;
+}
+
+h3 {
+    font-size: medium;
+}

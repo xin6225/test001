@@ -14,6 +14,8 @@ import {MatSort, MatSortModule, Sort} from "@angular/material/sort";
 import {LiveAnnouncer} from "@angular/cdk/a11y";
 import {MatListModule} from "@angular/material/list";
 import {PackingList} from "@xintek/travel/plans/models/packinglist";
+import {BudgetComponent} from "@xintek/travel/plans/components/budget/budget.component";
+import {KostPlan} from "@xintek/travel/plans/models/budgets";
 
 @Component({
     selector: 'app-plans',
@@ -29,6 +31,7 @@ import {PackingList} from "@xintek/travel/plans/models/packinglist";
         MatTabsModule,
         MatTableModule,
         MatListModule,
+        BudgetComponent,
     ],
     templateUrl: './plans.component.html',
     styleUrl: './plans.component.scss',
@@ -39,9 +42,13 @@ export class PlansComponent implements AfterViewInit {
     #liveAnnouncer = inject(LiveAnnouncer);
     public todos: Todo[];
     public displayedColumns = ['visitTime', 'continent', 'country', 'area', 'name', 'description', 'must'];
-    public landmarks: Landmark[] = [];
     public packingList: PackingList[] = [];
     public dataSource = new MatTableDataSource<Landmark>();
+    public dataSourceBudget = new MatTableDataSource<KostPlan>();
+
+    public landmarks: Landmark[] = [];
+    public kostPlan: KostPlan[] = [];
+
 
     @ViewChild(MatSort)
     public sort: MatSort | undefined;
@@ -54,6 +61,7 @@ export class PlansComponent implements AfterViewInit {
 
     ngAfterViewInit() {
         this.dataSource = new MatTableDataSource(this.landmarks);
+        this.dataSourceBudget = new MatTableDataSource(this.kostPlan);
         this.dataSource.sort = this.sort!;
     }
 

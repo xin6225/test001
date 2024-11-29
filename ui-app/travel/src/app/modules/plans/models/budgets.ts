@@ -1,33 +1,37 @@
-export interface Budget {
-    category: BudgetCategory;
-    period: Period;
+export interface KostPlan {
+    category: string;
+    period?: string;
+    periodCount?: number;
     amount: number;
     currency?: string;
     description: string;
 }
 
 export interface Kost {
-    category: BudgetCategory;
-    period: Period;
+    category: string;
+    period?: string;
+    periodCount?: number;
     amount: number;
     currency?: string; // default EURO
     description?: string;
 }
 
-enum BudgetCategory {
-    EQUIPMENT = 'EQUIPMENT',
-    INSURANCE = 'INSURANCE',
-    TRANSPORT = 'TRANSPORT',
-    VISUM = 'VISUM',
-    ACCOMMODATION = 'ACCOMMODATION', //unterkunft
-    FOOD = 'FOOD', // essen & trinken
-    ACTIVITIES = 'ACTIVITIES',  // tickets, guild tour etc.
-    SHOPPING = 'SHOPPING',
-    OTHERS = 'OTHERS'
-}
-
-enum Period {
-    DAY = 'DAY',
-    WEEK = 'WEEK',
-    MONTH = 'MONTH'
-}
+/**
+ * enum BudgetCategory {
+ *     EQUIPMENT = 'EQUIPMENT',
+ *     INSURANCE = 'INSURANCE',
+ *     TRANSPORT = 'TRANSPORT',
+ *     VISUM = 'VISUM',
+ *     ACCOMMODATION = 'ACCOMMODATION', //unterkunft
+ *     FOOD = 'FOOD', // essen & trinken
+ *     ACTIVITIES = 'ACTIVITIES',  // tickets, guild tour etc.
+ *     SHOPPING = 'SHOPPING',
+ *     OTHERS = 'OTHERS'
+ * }
+ *
+ * enum Period {
+ *     DAY = 'DAY',
+ *     WEEK = 'WEEK',
+ *     MONTH = 'MONTH'
+ * }
+ */

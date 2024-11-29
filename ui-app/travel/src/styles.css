@@ -18,3 +18,11 @@ h2 {
 h3 {
     font-size: medium;
 }
+
+.mat-mdc-tab.mdc-tab {
+    border-left: 1px solid #ccc;
+}
+
+.mat-mdc-tab-body-content {
+    border-top: 1px solid #ccc;
+}

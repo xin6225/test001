@@ -1,5 +1,9 @@
 <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-    <mat-tab label="Targets" matSort (matSortChange)="announceSortChange($event)">
+    <mat-tab matSort (matSortChange)="announceSortChange($event)">
+        <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">crisis_alert</mat-icon>
+            Targets
+        </ng-template>
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
             <ng-container matColumnDef="must">
                 <th mat-header-cell *matHeaderCellDef>Must Have?</th>
@@ -39,18 +43,28 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
     </mat-tab>
-    <mat-tab label="Budgets">
-        Visum
-        Währungen
-        Verkehrsmittel
-        Unterkunft
-        Essen/Trinken
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">payments</mat-icon>
+            Budgets
+        </ng-template>
+        <app-budget></app-budget>
     </mat-tab>
 
-    <mat-tab label="Todos">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">checklist_rtl</mat-icon>
+            Todos
+        </ng-template>
         <div class="todos-action-buttons">
-            <button mat-button (click)="accordion().openAll()">Expand All</button>
-            <button mat-button (click)="accordion().closeAll()">Collapse All</button>
+            <button mat-button (click)="accordion().openAll()">
+                <mat-icon class="tab-icon">unfold_more</mat-icon>
+                expand
+            </button>
+            <button mat-button (click)="accordion().closeAll()">
+                <mat-icon class="tab-icon">unfold_less</mat-icon>
+                collapse
+            </button>
         </div>
         <mat-accordion class="todos-headers-align" multi>
             @for (todo of todos; track todo) {
@@ -69,7 +83,11 @@
             }
         </mat-accordion>
     </mat-tab>
-    <mat-tab label="Packlist">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">luggage</mat-icon>
+            Packlist
+        </ng-template>
         @for (item of packingList; track item; let i = $index) {
             <h3>{{ item.category }}</h3>
             <mat-list>

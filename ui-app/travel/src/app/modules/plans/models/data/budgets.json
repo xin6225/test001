@@ -1,8 +1,49 @@
 [
   {
-    "category": "TRANSPORT",
+    "category": "FLIGHT",
+    "periodCount": 1,
+    "period": "DAY",
+    "amount": 300,
+    "description": "Flight from Munich to Cairo"
+  },
+  {
+    "category": "FLIGHT",
+    "periodCount": 1,
     "period": "DAY",
     "amount": 200,
-    "description": "Flight from Munich to Cairo"
+    "description": "Flight from Cairo to Dubai"
+  },
+  {
+    "category": "FLIGHT",
+    "periodCount": 1,
+    "period": "DAY",
+    "amount": 200,
+    "description": "Flight from Dubai to Nepal"
+  },
+  {
+    "category": "TRANSPORT",
+    "periodCount": 1,
+    "period": "DAY",
+    "amount": 30,
+    "description": "Taxi in Cairo"
+  },
+  {
+    "category": "ACCOMMODATION",
+    "periodCount": 7,
+    "period": "DAY",
+    "amount": 350,
+    "description": "Hotel in Cairo"
+  },
+  {
+    "category": "VISUM",
+    "amount": 23,
+    "description": "Visum in Cairo"
+  },
+  {
+    "category": "VISUM",
+    "periodCount": 1,
+    "period": "DAY",
+    "amount": 23,
+    "description": "Visum in Cairo"
   }
 ]

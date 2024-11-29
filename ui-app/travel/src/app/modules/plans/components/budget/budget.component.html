@@ -1,0 +1,44 @@
+<ul>
+    @for (kost of kostPlan; track kost) {
+        <li>
+            @switch (kost.category) {
+                @case ('FLIGHT') {
+                    <mat-icon>flight</mat-icon>
+                }
+                @case ('TRANSPORT') {
+                    <mat-icon>local_taxi</mat-icon>
+                }
+                @case ('ACCOMMODATION') {
+                    <mat-icon>hotel</mat-icon>
+                }
+                @case ('VISUM') {
+                    <mat-icon>verified_user</mat-icon>
+                }
+                @case ('SHOPPING') {
+                    <mat-icon>shopping_cart</mat-icon>
+                }
+                @case ('ACTIVITIES') {
+                    <mat-icon>nordic_walking</mat-icon>
+                }
+                @case ('FOOD') {
+                    <mat-icon>restaurant</mat-icon>
+                }
+                @case ('INSURANCE') {
+                    <mat-icon>health_and_safety</mat-icon>
+                }
+                @case ('EQUIPMENT') {
+                    <mat-icon>construction</mat-icon> Equipment
+                }
+                @default {
+                    Others
+                }
+            }
+            ({{ kost.description }}): {{ kost.amount }}
+            @if (kost.currency) {
+                {{ kost.currency }}
+            } @else {
+                Euro
+            }
+        </li>
+    }
+</ul>

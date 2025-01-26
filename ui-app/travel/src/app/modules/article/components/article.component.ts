@@ -1,5 +1,4 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {TranslateModule} from '@ngx-translate/core';
 import {Article} from "../models/article";
 import {ArticleService} from "../../../services/article.service";
 import {MatDividerModule} from "@angular/material/divider";
@@ -12,7 +11,6 @@ import {DatetimePipe} from "../../../pipes/datetime.pipe";
     styleUrl: './article.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [
-        TranslateModule,
         MatDividerModule,
         DatetimePipe
     ],

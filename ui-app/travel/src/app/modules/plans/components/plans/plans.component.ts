@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, inject, ViewChild, viewChild} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, ViewChild, viewChild} from '@angular/core';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonModule} from '@angular/material/button';
 import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
@@ -10,8 +10,7 @@ import {PlansService} from "../../../../services/plans.service";
 import {Todo} from "@xintek/travel/plans/models/todos";
 import {MatTableDataSource, MatTableModule} from "@angular/material/table";
 import {Landmark} from "@xintek/travel/plans/models/landmarks";
-import {MatSort, MatSortModule, Sort} from "@angular/material/sort";
-import {LiveAnnouncer} from "@angular/cdk/a11y";
+import {MatSort, MatSortModule} from "@angular/material/sort";
 import {MatListModule} from "@angular/material/list";
 import {PackingList} from "@xintek/travel/plans/models/packinglist";
 import {BudgetComponent} from "@xintek/travel/plans/components/budget/budget.component";
@@ -39,7 +38,7 @@ import {KostPlan} from "@xintek/travel/plans/models/budgets";
 })
 export class PlansComponent implements AfterViewInit {
     accordion = viewChild.required(MatAccordion);
-    #liveAnnouncer = inject(LiveAnnouncer);
+
     public todos: Todo[];
     public displayedColumns = ['visitTime', 'continent', 'country', 'area', 'name', 'description', 'must'];
     public packingList: PackingList[] = [];
@@ -65,12 +64,4 @@ export class PlansComponent implements AfterViewInit {
         this.dataSource.sort = this.sort!;
     }
 
-    /** Announce the change in sort state for assistive technology. */
-    announceSortChange(sortState: Sort) {
-        if (sortState.direction) {
-            this.#liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
-        } else {
-            this.#liveAnnouncer.announce('Sorting cleared');
-        }
-    }
 }

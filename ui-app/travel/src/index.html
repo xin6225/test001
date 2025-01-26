@@ -3,7 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>Travel around the world</title>
-    <base href="/">
+    <script>
+        let baseUrl = 'https://xintek.de/';
+        if (window.location.port.endsWith('4200')) { // development mode
+            baseUrl = '/';
+        }
+        document.write(`<base href="${baseUrl}"/>`);
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="favicon.ico" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">

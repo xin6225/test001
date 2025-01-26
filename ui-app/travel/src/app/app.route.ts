@@ -7,7 +7,15 @@ import {HomeComponent} from "@xintek/travel/home/home/home.component";
 export const routes: Routes = [
     {
         path: '',
+        redirectTo: '/home',
+        pathMatch: 'full',
+    },
+    {
+        path: '',
         component: AppComponent,
+        canActivate: [() => {
+            return true;
+        }],
         children: [
             {
                 path: 'home',
@@ -29,8 +37,9 @@ export const routes: Routes = [
                 canActivate: [() => {
                     return true;
                 }]
-            }
+            },
         ]
     },
-    {path: '', redirectTo: '/home', pathMatch: 'full'},
+
+
 ];

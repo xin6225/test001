@@ -5,7 +5,7 @@ module.exports = {
     "ignorePatterns": [
         "docs"
     ],
-    "plugins": ["deprecation"],
+  "plugins": [],
     "overrides": [
         {
             "files": [
@@ -151,8 +151,7 @@ module.exports = {
                 ],
                 "@angular-eslint/use-pipe-transform-interface": [
                     "error"
-                ],
-                "deprecation/deprecation": "error"
+                ]
             }
         },
         {

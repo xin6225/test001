@@ -6,15 +6,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {PlansService} from "../../../../services/plans.service";
-import {Todo} from "@xintek/travel/plans/models/todos";
-import {MatTableDataSource, MatTableModule} from "@angular/material/table";
-import {Landmark} from "@xintek/travel/plans/models/landmarks";
-import {MatSort, MatSortModule} from "@angular/material/sort";
-import {MatListModule} from "@angular/material/list";
-import {PackingList} from "@xintek/travel/plans/models/packinglist";
-import {BudgetComponent} from "@xintek/travel/plans/components/budget/budget.component";
-import {KostPlan} from "@xintek/travel/plans/models/budgets";
+import {PlansService} from '../../../../services/plans.service';
+import {Todo} from '@xintek/travel/plans/models/todos';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import {Landmark} from '@xintek/travel/plans/models/landmarks';
+import {MatSort, MatSortModule} from '@angular/material/sort';
+import {MatListModule} from '@angular/material/list';
+import {PackingList} from '@xintek/travel/plans/models/packinglist';
+import {KostPlan} from '@xintek/travel/plans/models/budgets';
 
 @Component({
     selector: 'app-plans',
@@ -30,7 +29,7 @@ import {KostPlan} from "@xintek/travel/plans/models/budgets";
         MatTabsModule,
         MatTableModule,
         MatListModule,
-        BudgetComponent,
+
     ],
     templateUrl: './plans.component.html',
     styleUrl: './plans.component.scss',
@@ -40,7 +39,7 @@ export class PlansComponent implements AfterViewInit {
     accordion = viewChild.required(MatAccordion);
 
     public todos: Todo[];
-    public displayedColumns = ['visitTime', 'continent', 'country', 'area', 'name', 'description', 'must'];
+  public displayedColumns = ['name', 'country', 'continent', 'area', 'description', 'visitTime', 'must'];
     public packingList: PackingList[] = [];
     public dataSource = new MatTableDataSource<Landmark>();
     public dataSourceBudget = new MatTableDataSource<KostPlan>();

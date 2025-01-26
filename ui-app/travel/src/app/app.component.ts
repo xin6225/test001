@@ -1,7 +1,6 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {RouterOutlet} from "@angular/router";
-import {MainMenuComponent} from "@xintek/travel/menus/components/main-menu/main-menu.component";
-import {CountdownComponent} from "@xintek/travel/countdown/countdown/countdown.component";
+import {RouterOutlet} from '@angular/router';
+import {MainMenuComponent} from '@xintek/travel/menus/components/main-menu/main-menu.component';
 
 @Component({
     selector: 'app-root',
@@ -12,7 +11,6 @@ import {CountdownComponent} from "@xintek/travel/countdown/countdown/countdown.c
     imports: [
         RouterOutlet,
         MainMenuComponent,
-        CountdownComponent,
     ]
 })
 export class AppComponent {

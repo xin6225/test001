@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {KostPlan} from "@xintek/travel/plans/models/budgets";
-import {PlansService} from "../../../../services/plans.service";
-import {MatIconModule} from "@angular/material/icon";
+import {KostPlan} from '@xintek/travel/plans/models/budgets';
+import {PlansService} from '../../../../../services/plans.service';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
     selector: 'app-budget',

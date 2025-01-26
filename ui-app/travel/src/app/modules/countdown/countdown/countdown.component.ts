@@ -70,7 +70,7 @@ export class CountdownComponent implements AfterViewInit {
 
             !isNaN(this.days!.nativeElement.innerText)
                 ? (this.days!.nativeElement.innerText = Math.floor(this.#diff))
-                : (this.days!.nativeElement.innerHTML = `<img src="assets/images/circle_spinner.gif" />`);
+              : (this.days!.nativeElement.innerHTML = '<img src=\'assets/circle_spinner.gif\' />');
         }, 1000);
     }
 

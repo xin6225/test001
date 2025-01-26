@@ -1,0 +1,31 @@
+<div class="todos-action-buttons">
+  <button mat-button (click)="accordion().openAll()">
+    <mat-icon class="tab-icon">unfold_more</mat-icon>
+    aufklappen
+  </button>
+  <button mat-button (click)="accordion().closeAll()">
+    <mat-icon class="tab-icon">unfold_less</mat-icon>
+    zukalppen
+  </button>
+</div>
+<mat-accordion class="todos-headers-align" multi>
+  @for (todo of todos; track todo) {
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>{{ todo.icon }}</mat-icon>
+          {{ todo.title }}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{ todo.description }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div> {{ todo.content }}</div>
+    </mat-expansion-panel>
+  }
+</mat-accordion>
+
+
+
+
+

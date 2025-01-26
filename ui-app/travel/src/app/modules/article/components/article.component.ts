@@ -1,8 +1,9 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {Article} from "../models/article";
-import {ArticleService} from "../../../services/article.service";
-import {MatDividerModule} from "@angular/material/divider";
-import {DatetimePipe} from "../../../pipes/datetime.pipe";
+import {Article} from '../models/article';
+import {ArticleService} from '../../../services/article.service';
+import {MatDividerModule} from '@angular/material/divider';
+import {DatetimePipe} from '../../../pipes/datetime.pipe';
+import {CountdownComponent} from '@xintek/travel/countdown/countdown/countdown.component';
 
 @Component({
     selector: 'app-article',
@@ -12,7 +13,8 @@ import {DatetimePipe} from "../../../pipes/datetime.pipe";
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [
         MatDividerModule,
-        DatetimePipe
+      DatetimePipe,
+      CountdownComponent
     ],
 })
 export class ArticleComponent {

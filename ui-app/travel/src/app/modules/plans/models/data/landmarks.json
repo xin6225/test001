@@ -207,7 +207,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": ""
+    "visitTime": "."
   },
   {
     "name": "Hawaii",
@@ -217,7 +217,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": ""
+    "visitTime": "."
   },
   {
     "name": "",
@@ -227,7 +227,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": ""
+    "visitTime": "."
   },
   {
     "name": "",
@@ -237,7 +237,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": ""
+    "visitTime": "."
   },
   {
     "name": "New York",
@@ -247,6 +247,6 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": ""
+    "visitTime": "."
   }
 ]

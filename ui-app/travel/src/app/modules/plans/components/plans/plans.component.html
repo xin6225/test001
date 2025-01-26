@@ -1,111 +1,46 @@
-<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-    <mat-tab matSort>
-        <ng-template mat-tab-label>
-            <mat-icon class="tab-icon">crisis_alert</mat-icon>
-            Reise Ziele
-        </ng-template>
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-            <ng-container matColumnDef="must">
-                <th mat-header-cell *matHeaderCellDef>Must-have?</th>
-                <td mat-cell *matCellDef="let element">
-                    @if (element.mustHave) {
-                        <mat-icon class="material-icons color_red">favorite</mat-icon>
-                    } @else {
-                        <mat-icon class="material-icons color_rosa">recommend</mat-icon>
-                    }
-                </td>
-            </ng-container>
-            <ng-container matColumnDef="visitTime">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Bester Besuchtsmonat</th>
-                <td mat-cell *matCellDef="let element"> {{ element.visitTime }}</td>
-            </ng-container>
-            <ng-container matColumnDef="continent">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Kontinent</th>
-                <td mat-cell *matCellDef="let element"> {{ element.continent }}</td>
-            </ng-container>
-            <ng-container matColumnDef="country">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Land</th>
-                <td mat-cell *matCellDef="let element"> {{ element.country }}</td>
-            </ng-container>
-            <ng-container matColumnDef="area">
-                <th mat-header-cell *matHeaderCellDef>Region</th>
-                <td mat-cell *matCellDef="let element"> {{ element.area }}</td>
-            </ng-container>
-            <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
-                <td mat-cell *matCellDef="let element"> {{ element.name }}</td>
-            </ng-container>
-            <ng-container matColumnDef="description">
-                <th mat-header-cell *matHeaderCellDef>Beschreibung / Information</th>
-                <td mat-cell *matCellDef="let element"> {{ element.description }} {{ element.detail }}</td>
-            </ng-container>
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-        </table>
-    </mat-tab>
-    <mat-tab>
-        <ng-template mat-tab-label>
-            <mat-icon class="tab-icon">payments</mat-icon>
-            Budget
-        </ng-template>
-        <app-budget></app-budget>
-    </mat-tab>
+<title>
+  <mat-icon class="tab-icon">crisis_alert</mat-icon>
+  Reise Ziele
+</title>
+<table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="must">
+    <th mat-header-cell *matHeaderCellDef>Must-have?</th>
+    <td mat-cell *matCellDef="let element">
+      @if (element.mustHave) {
+        <mat-icon class="material-icons color_red">favorite</mat-icon>
+      } @else {
+      <mat-icon class="material-icons color_rosa">recommend</mat-icon>
+    }
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="visitTime">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Bester Besuchtsmonat</th>
+    <td mat-cell *matCellDef="let element"> {{ element.visitTime }}</td>
+  </ng-container>
+  <ng-container matColumnDef="continent">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Kontinent</th>
+    <td mat-cell *matCellDef="let element"> {{ element.continent }}</td>
+  </ng-container>
+  <ng-container matColumnDef="country">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Land</th>
+    <td mat-cell *matCellDef="let element"> {{ element.country }}</td>
+  </ng-container>
+  <ng-container matColumnDef="area">
+    <th mat-header-cell *matHeaderCellDef>Region</th>
+    <td mat-cell *matCellDef="let element"> {{ element.area }}</td>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+    <td mat-cell *matCellDef="let element"> {{ element.name }}</td>
+  </ng-container>
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Beschreibung / Information</th>
+    <td mat-cell *matCellDef="let element"> {{ element.description }} {{ element.detail }}</td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
 
-    <mat-tab>
-        <ng-template mat-tab-label>
-            <mat-icon class="tab-icon">checklist_rtl</mat-icon>
-            die To-do-Liste
-        </ng-template>
-        <div class="todos-action-buttons">
-            <button mat-button (click)="accordion().openAll()">
-                <mat-icon class="tab-icon">unfold_more</mat-icon>
-                aufklappen
-            </button>
-            <button mat-button (click)="accordion().closeAll()">
-                <mat-icon class="tab-icon">unfold_less</mat-icon>
-                zukalppen
-            </button>
-        </div>
-        <mat-accordion class="todos-headers-align" multi>
-            @for (todo of todos; track todo) {
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            <mat-icon>{{ todo.icon }}</mat-icon>
-                            {{ todo.title }}
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            {{ todo.description }}
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <div> {{ todo.content }}</div>
-                </mat-expansion-panel>
-            }
-        </mat-accordion>
-    </mat-tab>
-    <mat-tab>
-        <ng-template mat-tab-label>
-            <mat-icon class="tab-icon">luggage</mat-icon>
-            Packliste
-        </ng-template>
-        40 Liter großer Rucksack und ein 15 Liter Tagesrucksack soll reichen. Beider Rucksäcke können zusammen binden,
-        falls man der kleine Tagesrucksack nicht braucht. Wir nehmen wirklich nur die nötigsten Sachen für unterwegs.
-        Wenn man fliegt, kann man auch alles ohne Problem als Handgepäck auf
-        Flugzeug mitnehmen. Natürlich Regenschutz und Packwürfel sind auch notwendig.
-
-        @for (item of packingList; track item; let i = $index) {
-            <h3>{{ item.category }}</h3>
-            <mat-list>
-                @for (thing of item.items; track thing) {
-                    <mat-list-item>
-                        <span matListItemTitle>{{ thing.name }}</span>
-                        <span matListItemLine>{{ thing.description }}</span>
-                    </mat-list-item>
-                }
-            </mat-list>
-        }
-    </mat-tab>
-</mat-tab-group>
 
 
 

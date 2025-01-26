@@ -1,4 +1,4 @@
-<img src="assets/travel-small.png" class="logo"/>
+<img src="/assets/travel-small.png" class="logo"/>
 <button mat-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
     Menu
@@ -10,11 +10,23 @@
     </a>
     <a routerLink="/plans" mat-menu-item>
         <mat-icon>travel_explore</mat-icon>
-        Plan
+      Reiseziele
     </a>
+  <a routerLink="/budgets" mat-menu-item>
+    <mat-icon>payments</mat-icon>
+    Budget
+  </a>
+  <a routerLink="/packlist" mat-menu-item>
+    <mat-icon>luggage</mat-icon>
+    Packliste
+  </a>
+  <a routerLink="/todos" mat-menu-item>
+    <mat-icon>checklist_rtl</mat-icon>
+    die To-do Liste
+  </a>
     <a routerLink="/report" mat-menu-item>
         <mat-icon>flag_circle</mat-icon>
-        Report
+      Berichte
     </a>
 </mat-menu>
 

@@ -1,27 +1,79 @@
 [
   {
-    "category": "Most Important",
+    "category": "Das Wichtigste",
     "items": [
       {
-        "name": "Passport",
-        "description": "with valid date and enough pages for Visum"
+        "name": "Reisepass",
+        "description": "mit gültigem Datum und genügend Seiten für Visum. Ein normaler Reisepass hat ca. 32 Seiten. Einige Länder verlangen, dass dein Reisepass mindestens 6 Monate vor der Einreise gültig ist. Du kannst einige Monate vor Starttermin einen 48-seitigen Reisepass beantragen. Normalerweise dauert es 4 bis 6 Wochen, bis man einen neuen Reisepass vom Bürgerbüro erhält."
       },
       {
-        "name": "Credit Card",
-        "description": "Which can be used in most countries"
+        "name": "Kreditkarte",
+        "description": "Die in den meisten Ländern verwendet werden können. 1 Visa-Karte und 1 Mastercard und einige Dollars, die in vielen Ländern verwendet werden können. Es ist besser, wenn du mit lokalen Währungen bezahlen kannst. Die kannst du an den meisten Geldautomaten am Flughafen oder in großen Städten abheben."
       },
       {
-        "name": "Notfall TelefonList / Kopie Passport",
-        "description": "If you lost your passport or in a emergency situation"
+        "name": "Notfall TelefonList / Kopie Reisepass oder Personalausweis",
+        "description": "Wenn du deinen Reisepass oder dein Handy verloren hast oder in einer Notsituation bist. Es ist hilfreich, wenn Sie eine Kopie Ihres Personalausweises vorlegen können, damit Ihnen das Auslandskonsulat ein neues Dokument ausstellen kann.Wenn du deine Kreditkarte oder dein Handy verloren hast, musst du deine Bank oder deinen Anbieter anrufen, um deine Karte sperren zu lassen, um den Verlust zu verringern. Und für einige ernste Situation, du oder andere Helfer kann deine Familie für Hilfe anrufen"
       }
     ]
   },
   {
-    "category": "Clothes",
+    "category": "Klamotten",
     "items": [
       {
-        "name": "Shoes",
-        "description": "2 paar"
+        "name": "T-Shirts",
+        "description": "4 oder 5"
+      },
+      {
+        "name": "Leichtes Hemd",
+        "description": "2"
+      },
+      {
+        "name": "(Kapuzen)Pullover",
+        "description": "1 oder 2"
+      },
+      {
+        "name": "Lange Stoffhose",
+        "description": "1"
+      },
+      {
+        "name": "Unterhosen",
+        "description": "7 oder 8"
+      },
+      {
+        "name": "kurze Hosen",
+        "description": "3 oder 4"
+      },
+      {
+        "name": "Badehose oder Bikini/Badeanzug",
+        "description": "2"
+      },
+      {
+        "name": "Regencape",
+        "description": "1"
+      },
+      {
+        "name": "Faltbare DaunenJacke",
+        "description": "1, nur notwendig, wenn man in ein kaltes Gebiet reist "
+      },
+      {
+        "name": "Feste Schuhe",
+        "description": "1 paar"
+      },
+      {
+        "name": "Mikrofaserhandtuch",
+        "description": "1"
+      },
+      {
+        "name": "Sport Hosen/ Leggins",
+        "description": "1 Male/Female"
+      },
+      {
+        "name": "Sonnenbrille",
+        "description": "1"
+      },
+      {
+        "name": "Tanktops/Tops",
+        "description": "4 Male/Femal"
       }
     ]
   }

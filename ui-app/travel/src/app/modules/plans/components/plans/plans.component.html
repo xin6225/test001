@@ -2,11 +2,11 @@
     <mat-tab matSort>
         <ng-template mat-tab-label>
             <mat-icon class="tab-icon">crisis_alert</mat-icon>
-            Targets
+            Reise Ziele
         </ng-template>
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
             <ng-container matColumnDef="must">
-                <th mat-header-cell *matHeaderCellDef>Must Have?</th>
+                <th mat-header-cell *matHeaderCellDef>Must-have?</th>
                 <td mat-cell *matCellDef="let element">
                     @if (element.mustHave) {
                         <mat-icon class="material-icons color_red">favorite</mat-icon>
@@ -16,19 +16,19 @@
                 </td>
             </ng-container>
             <ng-container matColumnDef="visitTime">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Best Visit Month</th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Bester Besuchtsmonat</th>
                 <td mat-cell *matCellDef="let element"> {{ element.visitTime }}</td>
             </ng-container>
             <ng-container matColumnDef="continent">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Continent</th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Kontinent</th>
                 <td mat-cell *matCellDef="let element"> {{ element.continent }}</td>
             </ng-container>
             <ng-container matColumnDef="country">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Country</th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Land</th>
                 <td mat-cell *matCellDef="let element"> {{ element.country }}</td>
             </ng-container>
             <ng-container matColumnDef="area">
-                <th mat-header-cell *matHeaderCellDef>Area</th>
+                <th mat-header-cell *matHeaderCellDef>Region</th>
                 <td mat-cell *matCellDef="let element"> {{ element.area }}</td>
             </ng-container>
             <ng-container matColumnDef="name">
@@ -36,7 +36,7 @@
                 <td mat-cell *matCellDef="let element"> {{ element.name }}</td>
             </ng-container>
             <ng-container matColumnDef="description">
-                <th mat-header-cell *matHeaderCellDef>description</th>
+                <th mat-header-cell *matHeaderCellDef>Beschreibung / Information</th>
                 <td mat-cell *matCellDef="let element"> {{ element.description }} {{ element.detail }}</td>
             </ng-container>
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -46,7 +46,7 @@
     <mat-tab>
         <ng-template mat-tab-label>
             <mat-icon class="tab-icon">payments</mat-icon>
-            Budgets
+            Budget
         </ng-template>
         <app-budget></app-budget>
     </mat-tab>
@@ -54,16 +54,16 @@
     <mat-tab>
         <ng-template mat-tab-label>
             <mat-icon class="tab-icon">checklist_rtl</mat-icon>
-            Todos
+            die To-do-Liste
         </ng-template>
         <div class="todos-action-buttons">
             <button mat-button (click)="accordion().openAll()">
                 <mat-icon class="tab-icon">unfold_more</mat-icon>
-                expand
+                aufklappen
             </button>
             <button mat-button (click)="accordion().closeAll()">
                 <mat-icon class="tab-icon">unfold_less</mat-icon>
-                collapse
+                zukalppen
             </button>
         </div>
         <mat-accordion class="todos-headers-align" multi>
@@ -86,8 +86,13 @@
     <mat-tab>
         <ng-template mat-tab-label>
             <mat-icon class="tab-icon">luggage</mat-icon>
-            Packlist
+            Packliste
         </ng-template>
+        40 Liter großer Rucksack und ein 15 Liter Tagesrucksack soll reichen. Beider Rucksäcke können zusammen binden,
+        falls man der kleine Tagesrucksack nicht braucht. Wir nehmen wirklich nur die nötigsten Sachen für unterwegs.
+        Wenn man fliegt, kann man auch alles ohne Problem als Handgepäck auf
+        Flugzeug mitnehmen. Natürlich Regenschutz und Packwürfel sind auch notwendig.
+
         @for (item of packingList; track item; let i = $index) {
             <h3>{{ item.category }}</h3>
             <mat-list>

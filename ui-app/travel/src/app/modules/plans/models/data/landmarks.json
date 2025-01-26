@@ -7,7 +7,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "06-08"
+    "visitTime": "Jun.-Aug."
   },
   {
     "name": "Finnland",
@@ -17,7 +17,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "06-08"
+    "visitTime": "Jun.-Aug."
   },
   {
     "name": "Dänemark",
@@ -27,7 +27,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "06-08"
+    "visitTime": "Jun.-Aug."
   },
   {
     "name": "Pyramide",
@@ -37,7 +37,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2025-09"
+    "visitTime": "Okt.-April."
   },
   {
     "name": "Dubai",
@@ -47,7 +47,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2025-09"
+    "visitTime": "Okt.-April"
   },
   {
     "name": "Oman",
@@ -57,7 +57,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2025-09"
+    "visitTime": "Okt.-April"
   },
   {
     "name": "Nepal",
@@ -67,7 +67,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2025-10"
+    "visitTime": "Okt.-Nov."
   },
   {
     "name": "Bankok",
@@ -77,7 +77,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2025-11"
+    "visitTime": "Nov.-April"
   },
   {
     "name": "Tokio",
@@ -87,7 +87,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2025-11"
+    "visitTime": "Sep.-Okt."
   },
   {
     "name": "Soel",
@@ -107,7 +107,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2025-11"
+    "visitTime": "Okt.-Nov."
   },
   {
     "name": "Sydney",
@@ -117,7 +117,7 @@
     "description": " ",
     "mustHave": false,
     "detail": "",
-    "visitTime": "2025-12"
+    "visitTime": "Okt.-April"
   },
   {
     "name": "Blue Mountains National Park",
@@ -127,7 +127,7 @@
     "description": " ",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2025-12"
+    "visitTime": "Okt.-April"
   },
   {
     "name": "",
@@ -137,7 +137,7 @@
     "description": " ",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2026-01"
+    "visitTime": "Nov.-Mär."
   },
   {
     "name": "",
@@ -147,7 +147,7 @@
     "description": " ",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2026-01"
+    "visitTime": "April-Okt."
   },
   {
     "name": "Buenos Aires",
@@ -167,7 +167,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2026-02"
+    "visitTime": "Sep.-Mai"
   },
   {
     "name": "Lake Titicaca",
@@ -177,7 +177,7 @@
     "description": " It is often called the highest navigable lake in the world.",
     "mustHave": true,
     "detail": "https://en.wikipedia.org/wiki/Lake_Titicaca",
-    "visitTime": "2026-03"
+    "visitTime": "Mai-Sep."
   },
   {
     "name": "Machu Picchu",
@@ -187,7 +187,17 @@
     "description": "Lost City of the Incas",
     "mustHave": true,
     "detail": "machupicchu.gob.pe",
-    "visitTime": "2026-04"
+    "visitTime": "April-Okt."
+  },
+  {
+    "name": "Mexiko City",
+    "country": "Mexiko",
+    "continent": "South America",
+    "area": "",
+    "description": "",
+    "mustHave": true,
+    "detail": "",
+    "visitTime": "Nov.-April"
   },
   {
     "name": "Cuba",
@@ -197,7 +207,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2026-05"
+    "visitTime": ""
   },
   {
     "name": "Hawaii",
@@ -207,17 +217,17 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2026-05"
+    "visitTime": ""
   },
   {
     "name": "",
     "country": "USA",
     "continent": "Nord America",
     "area": "West",
-    "description": " It is often called the highest navigable lake in the world.",
+    "description": "",
     "mustHave": true,
-    "detail": "https://en.wikipedia.org/wiki/Lake_Titicaca",
-    "visitTime": "2026-06"
+    "detail": "",
+    "visitTime": ""
   },
   {
     "name": "",
@@ -227,7 +237,7 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2026-07"
+    "visitTime": ""
   },
   {
     "name": "New York",
@@ -237,6 +247,6 @@
     "description": "",
     "mustHave": true,
     "detail": "",
-    "visitTime": "2026-08"
+    "visitTime": ""
   }
 ]

@@ -1,17 +1,54 @@
 :host {
-  background-color: #eee;
+  background-color: #F5F5F5;
 }
 
 section {
-  border-bottom: 1px solid darkcyan;
+  flex: 1 1 auto;
+  border: 2px solid #BCD7B6;
   border-radius: 4px;
-  padding: 5px;
-  margin: 5px;
+  padding: 20px;
+  margin: 30px;
   box-shadow: 2px 6px 9px 2px rgb(0 0 0 / 20%);
-  background-color: #fff;
+  background-color: #FFFFFF;
+  min-width: 300px;
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .text {
+      font-size: 1em;
+      max-width: 600px;
+    }
+
+    .article-image {
+      flex: 1 1 auto;
+      max-height: 500px;
+      max-width: 600px;
+      border-radius: 40px;
+    }
+  }
+
+
 }
 
-.map {
-  max-height: 500px;
-  max-width: 600px;
+
+@media screen and (max-width: 599px) {
+  section {
+    padding: 5px;
+    margin: 5px;
+
+    .content {
+      .article-image {
+        max-height: 500px;
+        max-width: 300px;
+        border-radius: 20px;
+      }
+    }
+  }
 }

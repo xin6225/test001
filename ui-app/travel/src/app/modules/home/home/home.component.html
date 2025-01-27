@@ -1,25 +1,12 @@
-<section>
-    <h2>Was ist der Plan?</h2>
-    <p> Ein Jahr lang um die Welt reisen, keine überstürzten Termine, keine Zeitvorgaben. Ihr könntet euere Ziele selbst
-        bestimmen!
-        Es gibt viele Orte, die man sehen wollte, bevor man sterbt. Urlaub ist sehr nützlich, aber er ist begrenzt.
-    </p>
-    <div><img src="/assets/world-scaled.png" class="map"/></div>
-    <p></p>
-</section>
-<section>
-    <h2>Ich hätte das auch gemacht!</h2>
-    <p></p>
-</section>
-<section>
-    <h2>Wie soll ich das machen?</h2>
-    <p> Start date is 1.September 2025 and we want to go back to Munich at the end of August 2026 </p>
-</section>
-<section>
-    <h2>Was für Information bekomme ich jetzt von dieser Seite ?</h2>
-    <p> Wir wollen 1 Jahr Sabbatical nutzen, um die Welt zu bereisen. Ihr könntet euch unseren detaillierten Plan über
-        unsere Ziele, Budgets, Todos vor dem Start und Packlisten.
-        Nachdem wir unsere Reise begonnen haben, wollen wir unsere Erfahrungen posten und die Reise für euch
-        dokumentieren. wer weiß, vielleicht
-        schaffst du doch eines Tages dasselbe tun wie wir!! </p>
-</section>
+@for (article of articles; track article) {
+  <section>
+    <h2>{{ article.title }}</h2>
+    @for (part of article?.contents; track part) {
+      <div class="content">
+        <p class="text"> {{ part.description }}</p>
+        <img [src]="part.imgUrl" class="article-image" alt="{{part.imgUrl}}"/>
+        <p></p>
+      </div>
+    }
+  </section>
+}

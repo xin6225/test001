@@ -16,51 +16,51 @@ import {PackingList} from '@xintek/travel/plans/models/packinglist';
 import {KostPlan} from '@xintek/travel/plans/models/budgets';
 
 @Component({
-    selector: 'app-plans',
-    standalone: true,
-    imports: [
-        MatButtonModule,
-        MatDatepickerModule,
-        MatExpansionModule,
-        MatFormFieldModule,
-        MatIconModule,
-        MatInputModule,
-        MatSortModule,
-        MatTabsModule,
-        MatTableModule,
-        MatListModule,
+  selector: 'app-plans',
+  standalone: true,
+  imports: [
+    MatButtonModule,
+    MatDatepickerModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatSortModule,
+    MatTabsModule,
+    MatTableModule,
+    MatListModule,
 
-    ],
-    templateUrl: './plans.component.html',
-    styleUrl: './plans.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+  ],
+  templateUrl: './plans.component.html',
+  styleUrl: './plans.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PlansComponent implements AfterViewInit {
-    accordion = viewChild.required(MatAccordion);
+  accordion = viewChild.required(MatAccordion);
 
-    public todos: Todo[];
+  public todos: Todo[];
   public displayedColumns = ['name', 'country', 'continent', 'area', 'description', 'visitTime', 'must'];
-    public packingList: PackingList[] = [];
-    public dataSource = new MatTableDataSource<Landmark>();
-    public dataSourceBudget = new MatTableDataSource<KostPlan>();
+  public packingList: PackingList[] = [];
+  public dataSource = new MatTableDataSource<Landmark>();
+  public dataSourceBudget = new MatTableDataSource<KostPlan>();
 
-    public landmarks: Landmark[] = [];
-    public kostPlan: KostPlan[] = [];
+  public landmarks: Landmark[] = [];
+  public kostPlan: KostPlan[] = [];
 
 
-    @ViewChild(MatSort)
-    public sort: MatSort | undefined;
+  @ViewChild(MatSort)
+  public sort: MatSort | undefined;
 
-    constructor(planService: PlansService) {
-        this.todos = planService.getTodos();
-        this.landmarks = planService.getLandmarks();
-        this.packingList = planService.getPacklist();
-    }
+  constructor(planService: PlansService) {
+    this.todos = planService.getTodos();
+    this.landmarks = planService.getLandmarks();
+    this.packingList = planService.getPacklist();
+  }
 
-    ngAfterViewInit() {
-        this.dataSource = new MatTableDataSource(this.landmarks);
-        this.dataSourceBudget = new MatTableDataSource(this.kostPlan);
-        this.dataSource.sort = this.sort!;
-    }
+  ngAfterViewInit() {
+    this.dataSource = new MatTableDataSource(this.landmarks);
+    this.dataSourceBudget = new MatTableDataSource(this.kostPlan);
+    this.dataSource.sort = this.sort!;
+  }
 
 }

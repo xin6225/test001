@@ -1,26 +1,22 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {Article} from '../models/article';
 import {ArticleService} from '../../../services/article.service';
-import {MatDividerModule} from '@angular/material/divider';
 import {DatetimePipe} from '../../../pipes/datetime.pipe';
-import {CountdownComponent} from '@xintek/travel/countdown/countdown/countdown.component';
 
 @Component({
-    selector: 'app-article',
-    standalone: true,
-    templateUrl: './article.component.html',
-    styleUrl: './article.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [
-        MatDividerModule,
-      DatetimePipe,
-      CountdownComponent
-    ],
+  selector: 'app-article',
+  standalone: true,
+  templateUrl: './article.component.html',
+  styleUrl: './article.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    DatetimePipe
+  ],
 })
 export class ArticleComponent {
-    public articles: Article[] | undefined;
+  public articles: Article[] | undefined;
 
-    constructor(articleService: ArticleService) {
-        this.articles = articleService.getAllArticles();
-    }
+  constructor(articleService: ArticleService) {
+    this.articles = articleService.getAllArticles();
+  }
 }

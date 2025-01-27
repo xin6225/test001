@@ -4,6 +4,7 @@ import {PlansComponent} from '@xintek/travel/plans/components/plans/plans.compon
 import {BudgetsComponent} from '@xintek/travel/plans/components/budgets/budgets.component';
 import {TodosComponent} from '@xintek/travel/plans/components/todos/todos.component';
 import {PacklistComponent} from '@xintek/travel/plans/components/packlist/packlist.component';
+import {ArticleComponent} from '@xintek/travel/article/components/article.component';
 
 export const routes: Routes = [
   {
@@ -23,17 +24,25 @@ export const routes: Routes = [
         path: 'plans',
         component: PlansComponent,
         canActivate: [() => true]
-      }, {
+      },
+      {
         path: 'budgets',
         component: BudgetsComponent,
         canActivate: [() => true]
-      }, {
+      },
+      {
         path: 'todos',
         component: TodosComponent,
         canActivate: [() => true]
-      }, {
+      },
+      {
         path: 'packlist',
         component: PacklistComponent,
+        canActivate: [() => true]
+      },
+      {
+        path: 'blog',
+        component: ArticleComponent,
         canActivate: [() => true]
       }
     ]

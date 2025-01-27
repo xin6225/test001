@@ -109,8 +109,8 @@
               },
               {
                 "glob": "**/*",
-                "input": "src/assets",
-                "output": "assets"
+                "input": "travel/src/assets",
+                "output": "/assets/"
               }
             ],
             "styles": [

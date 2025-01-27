@@ -1,18 +1,13 @@
-<title>
-  <mat-icon class="tab-icon">luggage</mat-icon>
-  Packliste
-</title>
-40 Liter großer Rucksack und ein 15 Liter Tagesrucksack soll reichen. Beider Rucksäcke können zusammen binden,
-falls man der kleine Tagesrucksack nicht braucht. Wir nehmen wirklich nur die nötigsten Sachen für unterwegs.
-Wenn man fliegt, kann man auch alles ohne Problem als Handgepäck auf
-Flugzeug mitnehmen. Natürlich Regenschutz und Packwürfel sind auch notwendig. 40 Liter großer Rucksack und ein
-15 Liter Tagesrucksack soll reichen. Beider Rucksäcke können zusammen binden,
-falls man der kleine Tagesrucksack nicht braucht. Wir nehmen wirklich nur die nötigsten Sachen für unterwegs.
-Wenn man fliegt, kann man auch alles ohne Problem als Handgepäck auf
-Flugzeug mitnehmen. Natürlich Regenschutz und Packwürfel sind auch notwendig.
+<div class="info">
+  40 Liter großer Rucksack und ein 15 Liter Tagesrucksack soll reichen. <br>
+  Beider Rucksäcke können zusammen binden,
+  falls man der kleine Tagesrucksack nicht braucht. Wir nehmen wirklich nur die nötigsten Sachen für unterwegs.
+  Wenn man fliegt, kann man auch alles ohne Problem als Handgepäck auf
+  Flugzeug mitnehmen. Natürlich Regenschutz und Packwürfel sind auch notwendig.
+</div>
 
 @for (item of packingList; track item; let i = $index) {
-  <h3>{{ item.category }}</h3>
+  <h2>{{ item.category }}</h2>
   <mat-list>
     @for (thing of item.items; track thing) {
       <mat-list-item>

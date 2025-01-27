@@ -1,26 +1,22 @@
-.todos-action-buttons {
-  padding-bottom: 20px;
+h2 {
+  font-size: 1.5em;
 }
 
-.todos-headers-align .mat-expansion-panel-header-description {
-  justify-content: space-between;
-  align-items: center;
+.info {
+  flex: 1 1 auto;
+  border: 2px solid #BCD7B6;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 30px;
+  box-shadow: 2px 6px 9px 2px rgb(0 0 0 / 20%);
+  background-color: #FFFFFF;
+  min-width: 300px;
 }
 
-.todos-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
-  margin-left: 8px;
+@media screen and (max-width: 599px) {
+  .info {
+    padding: 5px;
+    margin: 5px;
+    
+  }
 }
-
-
-.material-icons.color_red {
-  color: #ff0000;
-}
-
-.material-icons.color_rosa {
-  color: #FF000035;
-}
-
-.tab-icon {
-  margin-right: 5px;
-}
-

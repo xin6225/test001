@@ -1,35 +1,26 @@
 services:
-
-  keycloak:
-    image: keycloak/keycloak
-    command: start-dev --import-realm
-    environment:
-      KC_DB: postgres
-      KC_DB_PASSWORD: pass
-      KC_DB_URL_HOST: keycloak-pg
-      KC_DB_USERNAME: xin
-      KEYCLOAK_ADMIN: xin
-      KEYCLOAK_ADMIN_PASSWORD: pass
-    restart: always
-    mem_limit: 1024M
+  webserver:
+    image: erseco/alpine-php-webserver
     ports:
-      - "8080:8080"
+      - 8090:8080
     volumes:
-      - keycloak-state:/opt/keycloak/state/
-    depends_on:
-      - keycloak-pg
-    logging:
-      driver: local
+      - ../ui-app/dist/travel/browser:/var/www/html
+    restart: unless-stopped
 
-  keycloak-pg:
-    image: postgres:17.0
-    environment:
-      POSTGRES_DB: keycloak
-      POSTGRES_USER: xin
-      POSTGRES_PASSWORD: pass
+  mysql-db:
+    image: mysql:9.2.0
     restart: always
-    mem_limit: 256M
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: strong_password
+      MYSQL_DATABASE: example_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user_password
+    ports:
+      - "3306:3306"
     volumes:
-      - keycloak:/var/lib/postgresql/data
-    logging:
-      driver: local
+      - db_data:/var/lib/mysql
+      - ./mysql-config:/etc/mysql/conf.d
+
+volumes:
+  db_data:

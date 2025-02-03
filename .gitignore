@@ -15,5 +15,6 @@ ui-app/.angular
 ui-app/.sass-cache
 ui-app/dist
 
+docker-compose/php
 
 *.iml

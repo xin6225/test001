@@ -1,13 +1,17 @@
 <?php
-require __DIR__ . "/inc/bootstrap.php";
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$uri = explode('/', $uri);
-if ((isset($uri[2]) && $uri[2] != 'user') || !isset($uri[3])) {
-  header("HTTP/1.1 404 Not Found");
-  exit();
-}
-require PROJECT_ROOT_PATH . "/Controller/Api/UserController.php";
-$objFeedController = new UserController();
-$strMethodName = $uri[3] . 'Action';
-$objFeedController->{$strMethodName}();
-?>
+/**
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
+ */
+
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define( 'WP_USE_THEMES', true );
+
+/** Loads the WordPress Environment and Template */
+require __DIR__ . '/wp-blog-header.php';

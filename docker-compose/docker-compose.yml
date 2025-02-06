@@ -1,26 +1,35 @@
 services:
   webserver:
-    image: erseco/alpine-php-webserver
-    ports:
-      - 8090:8080
+    image: wordpress
     volumes:
-      - ../ui-app/dist/travel/browser:/var/www/html
-    restart: unless-stopped
-
-  mysql-db:
-    image: mysql:9.2.0
+      - ../backend/src/php:/var/www/html
     restart: always
-    container_name: mysql-db
+    ports:
+      - "8090:80"
     environment:
-      MYSQL_ROOT_PASSWORD: strong_password
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: admin
+      WORDPRESS_DB_PASSWORD: user_password
+      WORDPRESS_DB_NAME: example_db
+    logging:
+      driver: local
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: user_password
       MYSQL_DATABASE: example_db
-      MYSQL_USER: user
+      MYSQL_USER: admin
       MYSQL_PASSWORD: user_password
+    logging:
+      driver: local
     ports:
       - "3306:3306"
     volumes:
-      - db_data:/var/lib/mysql
+      - db:/var/lib/mysql
       - ./mysql-config:/etc/mysql/conf.d
 
 volumes:
-  db_data:
+  db:
+

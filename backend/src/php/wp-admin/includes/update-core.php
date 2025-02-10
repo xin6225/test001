@@ -519,7 +519,6 @@ $_old_files = array(
   'wp-admin/images/about-search-2x.png',
   'wp-admin/images/bubble_bg-rtl-2x.gif',
   'wp-admin/images/wp-badge-2x.png',
-  'wp-admin/images/wordpress-logo-2x.png',
   'wp-admin/images/bubble_bg-rtl.gif',
   'wp-admin/images/wp-badge.png',
   'wp-admin/images/menu-shadow.png',

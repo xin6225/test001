@@ -1798,6 +1798,10 @@ msgstr "Dies sind einige der kommenden Veranstaltungen."
 msgid "Events"
 msgstr "Veranstaltungen"
 
+#: patterns/footer-columns.php:49
+msgid "Privacy"
+msgstr "Datenschutz"
+
 #: patterns/event-3-col.php
 msgctxt "Pattern description"
 msgid "A header with title and text and three columns that show 3 events with their images and titles."
